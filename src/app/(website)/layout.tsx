@@ -1,13 +1,17 @@
+import Footer from "@/reusable/Footer";
+import Navbar from "@/reusable/Navbar";
 import React from "react";
 
-function layout({ children }: { children: React.ReactNode }) {
+function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      <div>
-        <div className="">{children}</div>
-      </div>
-    </>
+    <div className="min-h-screen bg-[#00091E]">
+      <Navbar />
+      <main className="min-h-screen bg-[#00091E]">
+        {children}
+      </main>
+      <Footer />
+    </div>
   );
 }
 
-export default layout;
+export default Layout;
