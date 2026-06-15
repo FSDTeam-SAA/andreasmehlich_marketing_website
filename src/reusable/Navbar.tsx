@@ -14,7 +14,7 @@ const navLinks = [
     items: [
       { label: "Dashboard", href: "dashboard" },
       { label: "Website Builder", href: "website-builder" },
-      { label: "Kora Go", href: "#changelog" },
+      { label: "Kora Go", href: "kora-go" },
       { label: "Roadmap", href: "#roadmap" },
     ],
   },
