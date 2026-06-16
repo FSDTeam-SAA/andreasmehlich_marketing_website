@@ -30,7 +30,7 @@ export default function RootLayout({
 
         <AppProvider>
           <AuthProvider>
-            <div className="min-h-screen bg-[#00091E]">
+            <div className="min-h-screen bg-[#010616]">
               {children}
             </div>
 

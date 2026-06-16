@@ -15,7 +15,7 @@ const navLinks = [
       { label: "Dashboard", href: "dashboard" },
       { label: "Website Builder", href: "website-builder" },
       { label: "Kora Go", href: "kora-go" },
-      { label: "Roadmap", href: "#roadmap" },
+      { label: "Pricing", href: "pricing" },
     ],
   },
   {
@@ -23,21 +23,19 @@ const navLinks = [
     href: "#",
     dropdown: true,
     items: [
-      { label: "Templates", href: "#templates" },
-      { label: "Integrations", href: "#integrations" },
-      { label: "Marketplace", href: "#marketplace" },
-      { label: "Community", href: "#community" },
+      { label: "Kora Hub", href: "kora-hub" },
+      { label: "Use Cases", href: "use-cases" },
+      { label: "Tutorials", href: "tutorials" },
     ],
-  },
+  }, 
   {
     label: "Company",
     href: "#",
     dropdown: true,
     items: [
-      { label: "About", href: "#about" },
-      { label: "Blog", href: "#blog" },
-      { label: "Careers", href: "#careers" },
-      { label: "Contact", href: "#contact" },
+      { label: "About us", href: "about-us" },
+      { label: "Contact", href: "contact" },
+      { label: "Search", href: "search" },
     ],
   },
 ];

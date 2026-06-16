@@ -4,9 +4,9 @@ import React from "react";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-[#00091E]">
+    <div className="min-h-screen bg-[#010616]">
       <Navbar />
-      <main className="min-h-screen bg-[#00091E]">
+      <main className="min-h-screen bg-[#010616]">
         {children}
       </main>
       <Footer />
