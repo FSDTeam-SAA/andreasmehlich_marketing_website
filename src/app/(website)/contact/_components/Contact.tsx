@@ -89,7 +89,7 @@ function Contact() {
               </span>
             </h1>
 
-            <p className="mt-7 max-w-xl text-lg leading-8 text-slate-300">
+            <p className="mt-7 max-w-xl text-lg leading-8 text-slate-300"> 
               Have a question, need support or want to explore partnership
               opportunities? Our team is ready to help.
             </p>
