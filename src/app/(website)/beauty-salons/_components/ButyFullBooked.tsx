@@ -92,7 +92,7 @@ function ButyFullBooked() {
               <div className="relative mx-auto w-full max-w-[330px] md:mx-0">
                 <div className="absolute inset-x-8 bottom-3 h-20 rounded-full bg-blue-500/10 blur-3xl" />
                 <Image
-                  src="/images/buty_2.svg"
+                  src="/images/well_1.svg"
                   alt="Fresh Cuts Barbershop owner"
                   width={482}
                   height={493}
@@ -169,7 +169,7 @@ function ButyFullBooked() {
 
           <div className="flex items-center gap-4 border-blue-300/10 md:border-l md:pl-10">
             <Image
-              src="/images/buty_2.svg"
+              src="/images/well_1.svg"
               alt="David Miller"
               width={54}
               height={54}
