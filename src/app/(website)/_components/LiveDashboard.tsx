@@ -59,7 +59,7 @@ export default function LiveDashboard() {
           {/* CTA Action Button */}
           <div className="pt-4 w-full sm:w-auto">
             <Link
-              href="#"
+              href="/dashboard"
               className="group flex items-center justify-center gap-2 rounded-xl bg-[#0052ff] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_4px_25px_rgba(0,82,255,0.4)] transition-all hover:bg-[#0046d9] hover:scale-[1.02] active:scale-[0.98]"
             >
               Start Free Trial

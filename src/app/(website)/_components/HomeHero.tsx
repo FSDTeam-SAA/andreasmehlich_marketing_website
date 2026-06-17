@@ -55,15 +55,15 @@ export default function HomeHero() {
 
             <div className="mt-9 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
               <Link
-                href="#"
-                className="group inline-flex h-12 items-center justify-center gap-3 rounded-xl bg-blue-600 px-7 text-sm font-semibold text-white shadow-[0_0_28px_rgba(37,99,235,0.55)] transition-colors hover:bg-blue-500"
+                href="/pricing"
+                className="group inline-flex h-12 items-center justify-center gap-3 rounded-xl bg-[#0643F6] px-7 text-sm font-semibold text-white shadow-[0_0_28px_rgba(37,99,235,0.55)] transition-colors hover:bg-blue-500"
               >
                 Start Free Trial
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
 
               <Link
-                href="#"
+                href="#need-to-grow"
                 className="inline-flex h-12 items-center justify-center rounded-xl border border-blue-300/10 bg-[#03142d]/60 px-6 text-sm font-medium text-slate-200 transition-colors hover:border-blue-300/25 hover:bg-blue-500/10 hover:text-white"
               >
                 Explore KoraAI

@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+import Link from "next/link";
 
 function RealTimeMonitoring() {
   // Left side features list
@@ -97,9 +98,14 @@ function RealTimeMonitoring() {
             ))}
           </div>
 
-          <Button className="w-full max-w-md bg-blue-600 hover:bg-blue-500 text-white font-medium h-12 rounded-xl flex items-center justify-center gap-2 group shadow-lg shadow-blue-600/20 transition-all">
-            Explore All Insights
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          <Button
+            asChild
+            className="w-full max-w-md bg-blue-600 hover:bg-blue-500 text-white font-medium h-12 rounded-xl flex items-center justify-center gap-2 group shadow-lg shadow-blue-600/20 transition-all"
+          >
+            <Link href="#real-time-insights">
+              Explore All Insights
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </Button>
         </div>
 

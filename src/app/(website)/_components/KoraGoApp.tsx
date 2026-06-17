@@ -34,7 +34,7 @@ export default function KoraGoApp() {
   ]
 
   return (
-    <section className="w-full bg-[#00091E] px-6 py-20 text-white md:px-12 lg:px-20 overflow-hidden">
+    <section className="w-full bg-[#00091E] px-6 lg:py-20  text-white md:px-12 lg:px-20 overflow-hidden">
       <div className="mx-auto grid max-w-[88rem] grid-cols-1 items-center gap-12 lg:grid-cols-12">
         
         {/* ================= LEFT COLUMN (Takes 4 Cols) ================= */}

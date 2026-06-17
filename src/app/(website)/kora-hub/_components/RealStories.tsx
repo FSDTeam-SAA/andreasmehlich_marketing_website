@@ -139,7 +139,7 @@ const accentClasses = {
 
 function RealStories() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#010616] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
+    <section id="Real" className="relative isolate overflow-hidden bg-[#010616] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_10%,rgba(37,99,235,0.13),transparent_30%),radial-gradient(circle_at_12%_50%,rgba(14,165,233,0.08),transparent_28%),radial-gradient(circle_at_88%_52%,rgba(139,92,246,0.09),transparent_28%)]" />
 
       <div className="container mx-auto">

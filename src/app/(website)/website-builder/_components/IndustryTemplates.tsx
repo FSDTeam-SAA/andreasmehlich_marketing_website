@@ -72,29 +72,34 @@ function IndustryTemplates() {
         </div>
 
         <div className="mx-auto mt-10 max-w-4xl rounded-2xl border border-blue-300/10 bg-[#061126]/80 p-6 shadow-2xl shadow-black/40">
-          <div className="flex justify-between items-start gap-5">
-            <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-blue-500/15 text-blue-300 shadow-[0_0_28px_rgba(37,99,235,0.24)]">
-              <Crown className="h-7 w-7" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-white">
-                Don&apos;t See Your Industry?
-              </h3>
-              <p className="mt-2 text-sm leading-6 text-slate-400">
-                Our AI can create the perfect template for any type of business.
-              </p>
-            </div>
-            <div>
-              <Link
-                href="#"
-                className="group mt-6 inline-flex h-12 items-center justify-center gap-3 rounded-xl bg-blue-600 px-6 text-sm font-semibold text-white shadow-[0_0_28px_rgba(37,99,235,0.45)] transition-colors hover:bg-blue-500"
-              >
-                Create Custom Template
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-          </div>
-        </div>
+  <div className="flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-center">
+    
+    <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-blue-500/15 text-blue-300 shadow-[0_0_28px_rgba(37,99,235,0.24)]">
+      <Crown className="h-7 w-7" />
+    </div>
+
+    <div className="flex-1">
+      <h3 className="text-lg font-semibold text-white">
+        Don&apos;t See Your Industry?
+      </h3>
+
+      <p className="mt-2 text-sm leading-6 text-slate-400">
+        Our AI can create the perfect template for any type of business.
+      </p>
+    </div>
+
+    <div className="w-full sm:w-auto">
+      <Link
+        href="/pricing"
+        className="group mt-2 inline-flex h-12 w-full items-center justify-center gap-3 rounded-xl bg-blue-600 px-6 text-sm font-semibold text-white shadow-[0_0_28px_rgba(37,99,235,0.45)] transition-colors hover:bg-blue-500 sm:mt-0 sm:w-auto"
+      >
+        Create Custom Template
+        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+      </Link>
+    </div>
+
+  </div>
+</div>
       </div>
     </section>
   );

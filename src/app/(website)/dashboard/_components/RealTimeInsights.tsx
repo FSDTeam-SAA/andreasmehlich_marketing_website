@@ -1,12 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-  Clock,
-  TrendingUp,
-  Users,
-  ShieldCheck,
-} from "lucide-react";
+import { Clock, TrendingUp, Users, ShieldCheck } from "lucide-react";
 
 function RealTimeInsights() {
   const stats = [
@@ -45,7 +40,10 @@ function RealTimeInsights() {
   ];
 
   return (
-    <div className="bg-[#020813] text-zinc-100  flex items-center justify-center p-6 font-sans">
+    <div
+      id="real-time-insights"
+      className="scroll-mt-20 bg-[#020813] text-zinc-100  flex items-center justify-center p-6 font-sans"
+    >
       {/* Main Container Banner */}
       <div className="w-full container border border-zinc-900 bg-gradient-to-r from-[#030e21] via-[#04122c] to-[#030e21] rounded-2xl p-8 lg:p-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 relative overflow-hidden shadow-2xl shadow-black/50">
         {/* Subtle wavy bottom background line glow */}

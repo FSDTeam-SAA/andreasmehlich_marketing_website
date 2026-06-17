@@ -50,13 +50,6 @@ function AboutKoraAi() {
                 Get Started
                 <ArrowRight className="h-4 w-4" />
               </Link>
-
-              <Link
-                href="/demo"
-                className="inline-flex h-12 items-center justify-center rounded-md border border-blue-300/15 bg-[#061126]/70 px-7 text-sm font-semibold text-slate-200 transition-colors hover:border-blue-300/30 hover:bg-blue-500/10 hover:text-white"
-              >
-                Book a Demo
-              </Link>
             </div>
 
             <div className="mt-12">

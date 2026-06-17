@@ -56,7 +56,7 @@ export default function FAQ() {
   ]
 
   return (
-    <section className="w-full bg-[#00091E] px-6 py-20 text-white md:px-12 lg:px-20">
+    <section className="w-full bg-[#00091E] px-6 lg:py-20 text-white md:px-12 lg:px-20">
       <div className="mx-auto container">
         
         {/* Top Header Section matching image_fc9382.png */}

@@ -44,7 +44,7 @@ const builderFeatures = [
 
 function AIWebsiteBuilder() {
   return (
-    <section className="relative overflow-hidden bg-[#020813] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-24">
+    <section id="AI-website-builder" className="relative overflow-hidden bg-[#020813] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-24">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_42%,rgba(37,99,235,0.18),transparent_36%),radial-gradient(circle_at_18%_50%,rgba(14,165,233,0.10),transparent_28%)]" />
 
       <div className="container relative mx-auto grid items-center gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">

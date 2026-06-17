@@ -88,7 +88,7 @@ function KorahubHero() {
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <Link
-                href="#"
+                href="#Real"
                 className="group inline-flex h-14 items-center justify-center gap-3 rounded-2xl bg-blue-600 px-8 text-base font-semibold text-white shadow-[0_0_32px_rgba(37,99,235,0.55)] transition-colors hover:bg-blue-500"
               >
                 Explore Kora Hub

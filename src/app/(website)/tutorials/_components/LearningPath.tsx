@@ -73,7 +73,7 @@ const paths = [
 
 function LearningPath() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#010616] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
+    <section id = "Choose-Your-Learning-Path" className="relative isolate overflow-hidden bg-[#010616] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
       <div className="absolute right-16 top-0 -z-10 h-32 w-48 rounded-full bg-blue-600/25 blur-3xl" />
 
       <div className="container mx-auto">

@@ -59,7 +59,7 @@ function Tutorials() {
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
             <Link
-              href="#"
+              href="#Choose-Your-Learning-Path"
               className="inline-flex h-14 items-center justify-center gap-3 rounded-md bg-gradient-to-r from-blue-600 to-violet-600 px-8 text-base font-semibold text-white shadow-[0_0_34px_rgba(79,70,229,0.48)] transition-transform hover:-translate-y-0.5"
             >
               <GraduationCap className="h-5 w-5" />
@@ -67,7 +67,7 @@ function Tutorials() {
             </Link>
 
             <Link
-              href="#"
+              href="#Most-Popular-Tutorials"
               className="inline-flex h-14 items-center justify-center gap-3 rounded-md border border-blue-300/15 bg-[#061126]/70 px-8 text-base font-semibold text-slate-200 transition-colors hover:border-blue-300/30 hover:bg-blue-500/10 hover:text-white"
             >
               <CirclePlay className="h-5 w-5" />

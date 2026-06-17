@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import Footer from "@/reusable/Footer";
 import Navbar from "@/reusable/Navbar";
+import FramerSmoothScroll from "./FramerSmoothScroll";
 
 const comingSoonRoutes = new Set([
   "/home-service",
@@ -17,6 +18,7 @@ function WebsiteChrome({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen bg-[#010616]">
+      <FramerSmoothScroll />
       {!hideChrome && <Navbar />}
       <main className={hideChrome ? "bg-[#010616]" : "min-h-screen bg-[#010616]"}>
         {children}

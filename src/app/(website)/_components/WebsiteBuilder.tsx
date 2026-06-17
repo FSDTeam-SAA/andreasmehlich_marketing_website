@@ -15,9 +15,9 @@ export default function WebsiteBuilder() {
   ];
 
   return (
-    <section className="w-full overflow-hidden bg-[#00091E] px-6 py-20 text-white md:px-12 lg:px-20">
+    <section className="w-full overflow-hidden bg-[#00091E] px-6 lg:py-20 text-white md:px-12 lg:px-20">
       {/* ৩টি কলামে নিখুঁতভাবে ভাগ করার জন্য grid-cols-12 ব্যবহার করা হয়েছে */}
-      <div className="container mx-auto grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-8">
+      <div className="container mx-auto grid grid-cols-1 items-center lg:gap-10 lg:grid-cols-12">
         {/* ================= FIRST PART: TEXT CONTENT (Takes 4 Cols) ================= */}
         <div className="flex h-full flex-col items-start justify-center space-y-6 lg:col-span-4">
           {/* Badge */}
@@ -52,7 +52,7 @@ export default function WebsiteBuilder() {
           {/* Action Button */}
           <div className="w-full pt-2 sm:w-auto">
             <Link
-              href="#"
+              href="/website-builder"
               className="group flex items-center justify-center gap-2 rounded-xl bg-[#0052ff] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_4px_25px_rgba(0,82,255,0.4)] transition-all hover:bg-[#0046d9] hover:scale-[1.02] active:scale-[0.98]"
             >
               Build My Website

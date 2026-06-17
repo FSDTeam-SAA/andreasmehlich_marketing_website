@@ -41,7 +41,10 @@ const bookingFeatures = [
 
 function BuiltInBookingSystem() {
   return (
-    <section className="relative overflow-hidden bg-[#020813] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-24">
+    <section
+      id="built-in-booking-system"
+      className="scroll-mt-20 relative overflow-hidden bg-[#020813] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-24"
+    >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_38%,rgba(37,99,235,0.18),transparent_34%)]" />
 
       <div className="container relative mx-auto">
@@ -112,7 +115,7 @@ function BuiltInBookingSystem() {
           </div>
 
           <Link
-            href="#"
+            href="#AI-website-builder"
             className="group inline-flex h-12 shrink-0 items-center justify-center gap-3 rounded-xl bg-blue-600 px-7 text-sm font-semibold text-white shadow-[0_0_28px_rgba(37,99,235,0.45)] transition-colors hover:bg-blue-500"
           >
             Build My Website

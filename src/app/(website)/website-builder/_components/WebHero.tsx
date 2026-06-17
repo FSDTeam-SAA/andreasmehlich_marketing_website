@@ -70,18 +70,11 @@ function WebHero() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="#"
+              href="#built-in-booking-system"
               className="group inline-flex h-12 items-center justify-center gap-3 rounded-xl bg-blue-600 px-7 text-sm font-semibold text-white shadow-[0_0_32px_rgba(37,99,235,0.52)] transition-colors hover:bg-blue-500"
             >
               Build My Website
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-
-            <Link
-              href="#"
-              className="inline-flex h-12 items-center justify-center rounded-xl border border-blue-300/10 bg-[#03142d]/60 px-7 text-sm font-semibold text-slate-200 transition-colors hover:border-blue-300/25 hover:bg-blue-500/10 hover:text-white"
-            >
-              Book Demo
             </Link>
           </div>
 

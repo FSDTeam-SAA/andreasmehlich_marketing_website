@@ -66,7 +66,10 @@ export default function NeedToGrow() {
   ];
 
   return (
-    <section className="w-full bg-[#00091E] px-6 py-20 text-white md:px-12 lg:px-20">
+    <section
+      id="need-to-grow"
+      className="scroll-mt-20 w-full bg-[#00091E] px-6 text-white md:px-12 lg:px-20 lg:pt-20 pt-14"
+    >
       <div className="mx-auto container">
         {/* Header Section from image_08c68a.png */}
         <div className="flex flex-col items-center text-center space-y-4 mb-16">
