@@ -66,7 +66,7 @@ const templateCards = [
   },
 ];
 
-function YourIndustry() {
+function ButyYourIndustry() {
   return (
     <section className="relative isolate overflow-hidden bg-[#020813] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_14%,rgba(37,99,235,0.18),transparent_30%),radial-gradient(circle_at_48%_86%,rgba(37,99,235,0.18),transparent_36%)]" />
@@ -185,4 +185,4 @@ function YourIndustry() {
   );
 }
 
-export default YourIndustry;
+export default ButyYourIndustry;
