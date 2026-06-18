@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { ArrowRight, Send, Sparkles } from "lucide-react";
+import { useMutation } from "@tanstack/react-query";
 import {
   Accordion,
   AccordionContent,
@@ -11,27 +12,19 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { useSession } from "next-auth/react";
 
-const messages = [
-  {
-    type: "user",
-    text: "How does KoraAI work for a beauty salon?",
-    time: "10:30 AM",
-  },
-  {
-    type: "ai",
-    text: "KoraAI helps beauty salons answer calls, book appointments, send reminders, follow up with leads, and automate marketing - so you can focus on your clients.",
-    time: "10:30 AM",
-  },
-  {
-    type: "user",
-    text: "Can KoraAI replace my receptionist?",
-    time: "10:31 AM",
-  },
+type ChatMessage = {
+  type: "user" | "ai";
+  text: string;
+  time: string;
+};
+
+const initialMessages: ChatMessage[] = [
   {
     type: "ai",
-    text: "Yes! Our AI Phone Agent handles calls 24/7, books appointments, answers common questions and captures leads - just like a real receptionist.",
-    time: "10:30 AM",
+    text: "Hi, I am Kora AI. How can I help you today?",
+    time: "Now",
   },
 ];
 
@@ -70,7 +63,11 @@ const questions = [
 
 function ChatWithKoraAi() {
   const [inputValue, setInputValue] = useState("");
-  const [chatMessages, setChatMessages] = useState(messages);
+  const [chatMessages, setChatMessages] =
+    useState<ChatMessage[]>(initialMessages);
+  const chatScrollRef = useRef<HTMLDivElement>(null);
+  const session = useSession();
+  const TOKEN = session?.data?.user?.accessToken;
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -90,7 +87,72 @@ function ChatWithKoraAi() {
       },
     ]);
     setInputValue("");
+    chatMutation.mutate(message);
   }
+
+  const chatMutation = useMutation({
+    mutationFn: async (message: string) => {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/ai-data/create-ai-data`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            ...(TOKEN ? { Authorization: `Bearer ${TOKEN}` } : {}),
+          },
+          body: JSON.stringify({ message }),
+        },
+      );
+
+      const response = await res.json().catch(() => null);
+
+      if (!res.ok || response?.success === false) {
+        throw new Error(
+          response?.message || "Kora AI could not reply. Please try again.",
+        );
+      }
+
+      return response;
+    },
+    onSuccess: (response) => {
+      setChatMessages((currentMessages) => [
+        ...currentMessages,
+        {
+          type: "ai",
+          text:
+            response?.data?.aireplay ||
+            "I received your message, but I could not generate a reply.",
+          time: "Now",
+        },
+      ]);
+    },
+    onError: (error) => {
+      setChatMessages((currentMessages) => [
+        ...currentMessages,
+        {
+          type: "ai",
+          text:
+            error instanceof Error
+              ? error.message
+              : "Kora AI could not reply. Please try again.",
+          time: "Now",
+        },
+      ]);
+    },
+  });
+
+  useEffect(() => {
+    const chatScroll = chatScrollRef.current;
+
+    if (!chatScroll) {
+      return;
+    }
+
+    chatScroll.scrollTo({
+      top: chatScroll.scrollHeight,
+      behavior: "smooth",
+    });
+  }, [chatMessages, chatMutation.isPending]);
 
   return (
     <section className="relative isolate overflow-hidden px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
@@ -114,7 +176,10 @@ function ChatWithKoraAi() {
               </p>
             </div>
 
-            <ScrollArea className="mt-6 min-h-0 flex-1 pr-2">
+            <ScrollArea
+              ref={chatScrollRef}
+              className="mt-6 min-h-0 flex-1 overscroll-contain pr-2"
+            >
               <div className="space-y-4">
                 {chatMessages.map((message, index) => {
                   const isAi = message.type === "ai";
@@ -125,7 +190,7 @@ function ChatWithKoraAi() {
                       className={`flex ${isAi ? "justify-start" : "justify-end"}`}
                     >
                       <div
-                        className={`rounded-lg border border-blue-300/10 bg-[#0a1730]/85 px-4 py-3 shadow-[0_12px_34px_rgba(0,0,0,0.18)] ${
+                        className={`rounded-lg border border-blue-300/1 0 bg-[#0a1730]/85 px-4 py-3 shadow-[0_12px_34px_rgba(0,0,0,0.18)] ${
                           isAi ? "w-full max-w-[410px]" : "w-full max-w-[430px]"
                         }`}
                       >
@@ -149,6 +214,13 @@ function ChatWithKoraAi() {
                     </div>
                   );
                 })}
+                {chatMutation.isPending && (
+                  <div className="flex justify-start">
+                    <div className="rounded-lg border border-blue-300/10 bg-[#0a1730]/85 px-4 py-3 text-sm font-semibold leading-none text-slate-300 shadow-[0_12px_34px_rgba(0,0,0,0.18)]">
+                      ...
+                    </div>
+                  </div>
+                )}
               </div>
             </ScrollArea>
 
@@ -165,7 +237,8 @@ function ChatWithKoraAi() {
               <button
                 type="submit"
                 aria-label="Send message"
-                className="grid h-8 w-8 place-items-center rounded-md bg-blue-600 text-white shadow-[0_0_20px_rgba(37,99,235,0.42)] transition-colors hover:bg-blue-500"
+                disabled={chatMutation.isPending}
+                className="grid h-8 w-8 place-items-center rounded-md bg-blue-600 text-white shadow-[0_0_20px_rgba(37,99,235,0.42)] transition-colors hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-60"
               >
                 <Send className="h-4 w-4" />
               </button>
