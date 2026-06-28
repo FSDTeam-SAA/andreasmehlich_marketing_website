@@ -5,8 +5,8 @@ import { Badge } from "@/components/ui/badge";
 
 function AIDashboardOverview() {
   return (
-    <section className="relative overflow-hidden bg-[#010813] px-4 py-16 text-zinc-100 sm:px-6 lg:px-8 lg:py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(76,141,246,0.18),transparent_34%)]" />
+    <section className="relative overflow-hidden bg-[#000712] px-4 py-16 text-zinc-100 sm:px-6 lg:px-8 lg:py-24">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(37,99,235,0.08),transparent_38%),linear-gradient(180deg,#000712_0%,#000712_78%,#020813_100%)]" />
 
       <div className="relative flex flex-col items-center text-center">
         <div className="max-w-3xl space-y-6">
@@ -29,18 +29,19 @@ function AIDashboardOverview() {
         </div>
 
         <div className="mt-14 w-full container ">
-          <div className="relative rounded-2xl p-2 shadow-[0_0_80px_rgba(76,141,246,0.28)] backdrop-blur-sm sm:p-3">
-            <div className="absolute -inset-4 -z-10 rounded-[2rem] " />
+          <div className="relative bg-[#000712]">
+            <div className="absolute -inset-10 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.10),rgba(0,7,18,0)_68%)]" />
 
-            <div className="overflow-hidden rounded-xl shadow-2xl shadow-black/50">
+            <div className="relative overflow-hidden bg-[#000712]">
               <Image
                 src="/images/dash_1.svg"
                 width={1200}
                 height={675}
                 alt="AI dashboard overview"
                 priority
-                className="h-auto w-full"
+                className="h-auto w-full [mask-image:linear-gradient(90deg,transparent_0%,#000_7%,#000_93%,transparent_100%),linear-gradient(180deg,transparent_0%,#000_8%,#000_92%,transparent_100%)] [mask-composite:intersect]"
               />
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#000712_0%,rgba(0,7,18,0)_9%,rgba(0,7,18,0)_91%,#000712_100%),linear-gradient(180deg,#000712_0%,rgba(0,7,18,0)_10%,rgba(0,7,18,0)_90%,#000712_100%)]" />
             </div>
           </div>
         </div>

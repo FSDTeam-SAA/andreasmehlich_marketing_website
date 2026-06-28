@@ -65,27 +65,31 @@ function AboutKoraAi() {
           </div>
 
           <div className="relative">
-            <div className="pointer-events-none absolute inset-10 -z-10 rounded-full bg-blue-500/20 blur-3xl" />
-            <Image
-              src="/images/about_1.svg"
-              alt="Kora AI platform shown across dashboard, website builder and mobile app"
-              width={1037}
-              height={860}
-              priority
-              className="mx-auto h-auto w-full max-w-[820px] drop-shadow-[0_0_70px_rgba(37,99,235,0.26)]"
-            />
+            <div className="pointer-events-none absolute inset-10 -z-10 rounded-full bg-blue-500/18 blur-3xl" />
+            <div className="relative mx-auto max-w-[820px] overflow-hidden bg-[#010616] drop-shadow-[0_0_64px_rgba(37,99,235,0.22)] [mask-image:linear-gradient(90deg,transparent_0%,#000_6%,#000_92%,transparent_100%)]">
+              <Image
+                src="/images/about_1.svg"
+                alt="Kora AI platform shown across dashboard, website builder and mobile app"
+                width={1037}
+                height={860}
+                priority
+                className="h-auto w-full"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#010616_0%,rgba(1,6,22,0.32)_8%,rgba(1,6,22,0)_28%,rgba(1,6,22,0.06)_80%,#010616_100%),linear-gradient(180deg,#010616_0%,rgba(1,6,22,0)_12%,rgba(1,6,22,0)_84%,#010616_100%)]" />
+            </div>
           </div>
         </div>
 
         <div className="mt-16 grid overflow-hidden rounded-2xl border border-blue-300/15 bg-[#061126]/65 shadow-[0_0_56px_rgba(37,99,235,0.12)] lg:grid-cols-[1.12fr_0.88fr]">
-          <div className="relative min-h-[320px] p-3 sm:p-5">
+          <div className="relative min-h-[320px] overflow-hidden bg-[#061126] p-3 sm:p-5">
             <Image
               src="/images/about_2.svg"
               alt="Kora AI real-time dashboard overview"
               width={775}
               height={506}
-              className="h-full min-h-[300px] w-full object-contain drop-shadow-[0_0_42px_rgba(37,99,235,0.22)]"
+              className="h-full min-h-[300px] w-full object-contain drop-shadow-[0_0_40px_rgba(37,99,235,0.2)] [mask-image:linear-gradient(90deg,transparent_0%,#000_5%,#000_95%,transparent_100%),linear-gradient(180deg,transparent_0%,#000_8%,#000_92%,transparent_100%)] [mask-composite:intersect]"
             />
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#061126_0%,rgba(6,17,38,0)_9%,rgba(6,17,38,0)_88%,#061126_100%),linear-gradient(180deg,#061126_0%,rgba(6,17,38,0)_10%,rgba(6,17,38,0)_86%,#061126_100%)]" />
           </div>
 
           <div className="relative p-8 sm:p-10 lg:p-12">

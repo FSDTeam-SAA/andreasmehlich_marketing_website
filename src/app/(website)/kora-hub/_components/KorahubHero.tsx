@@ -122,16 +122,17 @@ function KorahubHero() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="pointer-events-none absolute inset-8 -z-10 rounded-full bg-blue-500/20 blur-3xl" />
+          <div className="relative overflow-hidden">
+            <div className="pointer-events-none absolute inset-8 -z-10 rounded-full bg-blue-500/12 blur-3xl" />
             <Image
               src="/images/korah_1.svg"
               alt="Kora Hub content network with customer stories, AI assistant, use cases and tutorials"
               width={935}
               height={834}
               priority
-              className="mx-auto h-auto w-full max-w-[760px] drop-shadow-[0_0_60px_rgba(37,99,235,0.26)]"
+              className="mx-auto h-auto w-full max-w-[760px] [mask-image:linear-gradient(90deg,transparent_0%,#000_10%,#000_88%,transparent_100%),linear-gradient(180deg,transparent_0%,#000_8%,#000_88%,transparent_100%)] [mask-composite:intersect] drop-shadow-[0_0_38px_rgba(37,99,235,0.16)]"
             />
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#010616_0%,rgba(1,6,22,0)_12%,rgba(1,6,22,0)_84%,#010616_100%),linear-gradient(180deg,#010616_0%,rgba(1,6,22,0)_10%,rgba(1,6,22,0)_84%,#010616_100%)]" />
           </div>
         </div>
 

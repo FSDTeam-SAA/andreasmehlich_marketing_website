@@ -30,6 +30,7 @@ const navLinks = [
       { label: "Kora Hub", href: "kora-hub" },
       { label: "Use Cases", href: "use-cases" },
       { label: "Tutorials", href: "tutorials" },
+      { label: "Help Center", href: "help-center" },
     ],
   }, 
   {

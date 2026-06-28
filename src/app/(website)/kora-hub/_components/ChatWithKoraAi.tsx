@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useEffect, useRef, useState } from "react";
-import { ArrowRight, Send, Sparkles } from "lucide-react";
+import { ArrowRight, Plus, Send, Sparkles } from "lucide-react";
 import { useMutation } from "@tanstack/react-query";
 import {
   Accordion,
@@ -155,20 +154,15 @@ function ChatWithKoraAi() {
   }, [chatMessages, chatMutation.isPending]);
 
   return (
-    <section className="relative isolate overflow-hidden px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
+    <section className="relative isolate overflow-hidden bg-[#010616] px-4 py-12 text-white sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_42%,rgba(37,99,235,0.16),transparent_26%),radial-gradient(circle_at_58%_78%,rgba(37,99,235,0.10),transparent_34%)]" />
       <div className="container mx-auto">
-        <div className="grid items-start gap-5 lg:grid-cols-[1.06fr_0.94fr]">
-          <div className="relative flex min-h-0 flex-col rounded-2xl border border-blue-300/15 bg-[#061126]/70 p-5 shadow-[0_0_48px_rgba(37,99,235,0.10)] backdrop-blur-sm sm:p-6 lg:h-[500px] lg:pl-16">
-            <Image
-              src="/images/korah_3.svg"
-              alt="Kora AI chatbot assistant"
-              width={116}
-              height={114}
-              className="absolute -left-7 top-24 z-10 h-16 w-16 drop-shadow-[0_0_30px_rgba(14,165,233,0.70)] sm:-left-10 sm:top-28 sm:h-24 sm:w-24"
-            />
-
-            <div className="ml-8 sm:ml-0">
-              <h2 className="text-2xl font-semibold text-white">
+        <div className="grid items-stretch gap-5 lg:grid-cols-[1.08fr_0.92fr]">
+          <div className="relative flex h-[430px] min-h-0 flex-col overflow-hidden rounded-2xl border border-blue-300/15 bg-[#061126]/45 p-4 shadow-[0_0_50px_rgba(37,99,235,0.10)] backdrop-blur-sm sm:h-[470px] sm:p-6 lg:h-[500px] lg:pl-6">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_5%_34%,rgba(37,99,235,0.20),transparent_18%)]" />
+            <div className="pointer-events-none absolute bottom-0 left-0 top-20 hidden w-px bg-blue-300/10 lg:block" />
+            <div className="relative z-10">
+              <h2 className="text-xl font-semibold text-white sm:text-2xl">
                 Chat With Kora AI
               </h2>
               <p className="mt-1 text-sm text-slate-400">
@@ -178,9 +172,9 @@ function ChatWithKoraAi() {
 
             <ScrollArea
               ref={chatScrollRef}
-              className="mt-6 min-h-0 flex-1 overscroll-contain pr-2"
+              className="relative z-10 mt-5 min-h-0 flex-1 overscroll-contain pr-2 sm:mt-6"
             >
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {chatMessages.map((message, index) => {
                   const isAi = message.type === "ai";
 
@@ -190,8 +184,8 @@ function ChatWithKoraAi() {
                       className={`flex ${isAi ? "justify-start" : "justify-end"}`}
                     >
                       <div
-                        className={`rounded-lg border border-blue-300/1 0 bg-[#0a1730]/85 px-4 py-3 shadow-[0_12px_34px_rgba(0,0,0,0.18)] ${
-                          isAi ? "w-full max-w-[410px]" : "w-full max-w-[430px]"
+                        className={`max-w-full rounded-lg border border-blue-300/10 bg-[#0a1730]/78 px-3 py-3 shadow-[0_14px_36px_rgba(0,0,0,0.20)] sm:px-4 ${
+                          isAi ? "w-full sm:max-w-[420px]" : "w-full sm:max-w-[390px]"
                         }`}
                       >
                         {isAi && (
@@ -226,7 +220,7 @@ function ChatWithKoraAi() {
 
             <form
               onSubmit={handleSubmit}
-              className="mt-5 flex items-center gap-3 rounded-lg border border-blue-300/10 bg-[#0a1730]/80 px-4 py-3"
+              className="relative z-10 mt-5 flex items-center gap-3 rounded-lg border border-blue-300/10 bg-[#0a1730]/80 px-4 py-3 shadow-[0_14px_36px_rgba(0,0,0,0.20)]"
             >
               <input
                 value={inputValue}
@@ -245,10 +239,10 @@ function ChatWithKoraAi() {
             </form>
           </div>
 
-          <div className="rounded-2xl border border-blue-300/15 bg-[#061126]/70 p-5 shadow-[0_0_48px_rgba(37,99,235,0.10)] backdrop-blur-sm sm:p-6">
-            <div className="flex items-start justify-between gap-4">
+          <div className="rounded-2xl border border-blue-300/15 bg-[#061126]/45 p-4 shadow-[0_0_48px_rgba(37,99,235,0.10)] backdrop-blur-sm sm:p-6 lg:h-[500px]">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
               <div>
-                <h2 className="text-2xl font-semibold text-white">
+                <h2 className="text-xl font-semibold text-white sm:text-2xl">
                   Q&A Center
                 </h2>
                 <p className="mt-1 text-sm text-slate-400">
@@ -257,7 +251,7 @@ function ChatWithKoraAi() {
               </div>
               <Link
                 href="#"
-                className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-blue-400 transition-colors hover:text-blue-300"
+                className="inline-flex w-fit shrink-0 items-center gap-2 text-sm font-semibold text-blue-400 transition-colors hover:text-blue-300"
               >
                 View all industries
                 <ArrowRight className="h-4 w-4" />
@@ -267,17 +261,17 @@ function ChatWithKoraAi() {
             <Accordion
               type="single"
               collapsible
-              defaultValue="question-0"
               className="mt-6 overflow-hidden rounded-lg border border-blue-300/10"
             >
               {questions.map(({ question, answer }, index) => (
                 <AccordionItem
                   key={question}
                   value={`question-${index}`}
-                  className="border-blue-300/10 bg-[#0a1730]/70 last:border-b-0"
+                  className="border-blue-300/10 bg-[#0a1730]/62 last:border-b-0"
                 >
-                  <AccordionTrigger className="px-4 py-4 text-sm font-medium text-slate-300 hover:bg-blue-500/10 hover:text-white hover:no-underline [&>svg]:text-blue-400">
-                    {question}
+                  <AccordionTrigger className="gap-3 px-4 py-3.5 text-left text-sm font-medium text-slate-300 hover:bg-blue-500/10 hover:text-white hover:no-underline [&>svg]:hidden">
+                    <span className="min-w-0">{question}</span>
+                    <Plus className="h-4 w-4 shrink-0 text-blue-400" />
                   </AccordionTrigger>
                   <AccordionContent className="bg-[#08152b]/75 px-4 pb-4 pr-10 text-xs leading-5 text-slate-400">
                     {answer}

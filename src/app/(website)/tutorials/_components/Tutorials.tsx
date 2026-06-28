@@ -95,15 +95,19 @@ function Tutorials() {
         </div>
 
         <div className="relative">
-          <div className="pointer-events-none absolute inset-8 -z-10 rounded-full bg-blue-500/20 blur-3xl" />
-          <Image
-            src="/images/tuto_1.svg"
-            alt="KoraAI tutorials dashboard with course cards and assistant preview"
-            width={1136}
-            height={840}
-            priority
-            className="mx-auto h-auto w-full max-w-[790px] drop-shadow-[0_0_70px_rgba(37,99,235,0.28)]"
-          />
+          <div className="pointer-events-none absolute -inset-y-16 left-6 right-0 -z-10 bg-[linear-gradient(90deg,transparent_0%,rgba(0,5,18,0.42)_34%,rgba(0,5,18,0.7)_82%,rgba(0,5,18,0.86)_100%)]" />
+          <div className="pointer-events-none absolute inset-10 -z-10 rounded-full bg-blue-500/14 blur-3xl" />
+          <div className="relative mx-auto max-w-[790px] overflow-hidden bg-[#000512] drop-shadow-[0_0_58px_rgba(37,99,235,0.2)] [mask-image:linear-gradient(90deg,transparent_0%,#000_8%,#000_84%,transparent_100%)]">
+            <Image
+              src="/images/tuto_1.svg"
+              alt="KoraAI tutorials dashboard with course cards and assistant preview"
+              width={1136}
+              height={840}
+              priority
+              className="h-auto w-full"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#000512_0%,rgba(0,5,18,0.42)_10%,rgba(0,5,18,0)_34%,rgba(0,5,18,0.08)_70%,rgba(0,5,18,0.42)_88%,#000512_100%),linear-gradient(180deg,#000512_0%,rgba(0,5,18,0)_14%,rgba(0,5,18,0)_78%,#000512_100%)]" />
+          </div>
         </div>
       </div>
     </section>

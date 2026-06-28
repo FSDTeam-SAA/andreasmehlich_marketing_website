@@ -62,23 +62,26 @@ function PhoneImage({
   className?: string;
 }) {
   return (
-    <div className={`relative mx-auto w-full max-w-[340px] ${className}`}>
-      <div className="pointer-events-none absolute inset-x-8 bottom-4 h-12 rounded-full bg-blue-500/35 blur-2xl" />
+    <div
+      className={`relative mx-auto w-full max-w-[340px] overflow-hidden ${className}`}
+    >
+      <div className="pointer-events-none absolute inset-x-8 bottom-4 h-12 rounded-full bg-blue-500/20 blur-2xl" />
       <Image
         src={src}
         width={360}
         height={620}
         alt={alt}
-        className="relative h-auto w-full drop-shadow-[0_0_42px_rgba(37,99,235,0.26)]"
+        className="relative h-auto w-full [mask-image:linear-gradient(90deg,transparent_0%,#000_10%,#000_88%,transparent_100%),linear-gradient(180deg,transparent_0%,#000_8%,#000_88%,transparent_100%)] [mask-composite:intersect] drop-shadow-[0_0_32px_rgba(37,99,235,0.16)]"
       />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#000711_0%,rgba(0,7,17,0)_12%,rgba(0,7,17,0)_84%,#000711_100%),linear-gradient(180deg,#000711_0%,rgba(0,7,17,0)_10%,rgba(0,7,17,0)_84%,#000711_100%)]" />
     </div>
   );
 }
 
 function ScheduleTask() {
   return (
-    <section className="relative overflow-hidden bg-[#020813] px-4 pb-16 text-white sm:px-6 lg:px-8 lg:pb-24 mt-10">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_52%_18%,rgba(37,99,235,0.14),transparent_28%),radial-gradient(circle_at_55%_96%,rgba(79,70,229,0.18),transparent_30%)]" />
+    <section className="relative mt-10 overflow-hidden bg-[#000711] px-4 pb-16 text-white sm:px-6 lg:px-8 lg:pb-24">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_52%_18%,rgba(37,99,235,0.10),transparent_30%),radial-gradient(circle_at_55%_96%,rgba(79,70,229,0.12),transparent_34%),linear-gradient(180deg,#020813_0%,#000711_12%,#000711_88%,#020813_100%)]" />
 
       <div className="relative mx-auto max-w-6xl space-y-10 lg:space-y-14">
         <div className="grid min-h-[420px] items-center gap-8 overflow-hidden rounded-2xl border border-blue-300/10 p-6 shadow-2xl shadow-black/40 lg:grid-cols-12 lg:p-10">

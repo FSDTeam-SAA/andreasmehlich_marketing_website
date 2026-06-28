@@ -11,9 +11,9 @@ import {
 
 function KoraHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#020813] px-4 py-14 text-white sm:px-6 lg:min-h-[calc(100vh-80px)] lg:px-8 lg:py-14">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_68%_38%,rgba(37,99,235,0.22),transparent_34%),radial-gradient(circle_at_18%_76%,rgba(59,130,246,0.16),transparent_28%)]" />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-32 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.34),transparent_62%)]" />
+    <section className="relative isolate overflow-hidden bg-[#000711] px-4 py-14 text-white sm:px-6 lg:min-h-[calc(100vh-80px)] lg:px-8 lg:py-14">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_68%_38%,rgba(37,99,235,0.16),transparent_38%),radial-gradient(circle_at_18%_76%,rgba(59,130,246,0.10),transparent_30%),linear-gradient(180deg,#000711_0%,#000711_84%,#020813_100%)]" />
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-32 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.22),transparent_66%)]" />
       <div className="absolute bottom-0 left-0 right-0 -z-10 h-px bg-blue-400/30 shadow-[0_0_42px_12px_rgba(37,99,235,0.45)]" />
 
       <div className="container mx-auto grid min-h-[calc(100vh-170px)] items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
@@ -97,8 +97,8 @@ function KoraHero() {
           </div>
         </div>
 
-        <div className="relative flex min-h-[440px] items-center justify-center lg:min-h-[620px]">
-          <div className="pointer-events-none absolute inset-8 rounded-full bg-blue-500/10 blur-3xl" />
+        <div className="relative flex min-h-[440px] items-center justify-center overflow-hidden lg:min-h-[620px]">
+          <div className="pointer-events-none absolute inset-8 rounded-full bg-blue-500/8 blur-3xl" />
 
           <div className="relative z-10 w-full max-w-[680px]">
             <Image
@@ -107,8 +107,9 @@ function KoraHero() {
               height={720}
               alt="Kora Go mobile app preview"
               priority
-              className="mx-auto h-auto w-full drop-shadow-[0_0_60px_rgba(37,99,235,0.34)]"
+              className="mx-auto h-auto w-full [mask-image:linear-gradient(90deg,transparent_0%,#000_10%,#000_88%,transparent_100%),linear-gradient(180deg,transparent_0%,#000_8%,#000_88%,transparent_100%)] [mask-composite:intersect] drop-shadow-[0_0_40px_rgba(37,99,235,0.18)]"
             />
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#000711_0%,rgba(0,7,17,0)_12%,rgba(0,7,17,0)_84%,#000711_100%),linear-gradient(180deg,#000711_0%,rgba(0,7,17,0)_10%,rgba(0,7,17,0)_84%,#000711_100%)]" />
           </div>
         </div>
       </div>
