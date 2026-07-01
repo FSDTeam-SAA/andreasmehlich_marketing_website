@@ -32,7 +32,7 @@ const avatars = [
 
 export default function HomeHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#00091E] px-4 pb-8 pt-12 sm:px-6 lg:min-h-[calc(100vh-80px)] lg:px-8 lg:pb-10 lg:pt-16 border-b border-blue-400/15">
+    <section className="relative isolate overflow-hidden bg-[#000B23] px-4 pb-8 pt-12 sm:px-6 lg:min-h-[calc(100vh-80px)] lg:px-8 lg:pb-10 lg:pt-16 border-b border-blue-400/15">
      
       <div className="mx-auto flex max-w-7xl flex-col justify-between gap-12 lg:min-h-[calc(100vh-136px)]">
         <div className="grid flex-1 items-center gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-16">
@@ -92,8 +92,8 @@ export default function HomeHero() {
 
           <div className="relative lg:-mr-4">
             <div className="absolute -inset-3 -z-10" />
-            <div className="overflow-hidden rounded-[1.7rem] border border-blue-400/25 bg-[#061126]/75 p-2 shadow-[0_0_70px_rgba(37,99,235,0.26)] backdrop-blur">
-              <div className="overflow-hidden rounded-[1.25rem] bg-[#071126]">
+            <div className="overflow-hidden rounded-[1.7rem] p-2">
+              <div className="overflow-hidden rounded-[1.25rem]">
                 <Image
                   src="/images/hero.svg"
                   alt="KoraAI business dashboard preview"

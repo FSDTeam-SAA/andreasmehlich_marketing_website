@@ -9,8 +9,8 @@ const benefits = [
 
 function WhyWeExist() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#010616] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_72%_50%,rgba(37,99,235,0.16),transparent_32%),radial-gradient(circle_at_20%_48%,rgba(139,92,246,0.08),transparent_26%)]" />
+    <section className="relative isolate overflow-hidden bg-[#000618] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
+      {/* <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_72%_50%,rgba(37,99,235,0.16),transparent_32%),radial-gradient(circle_at_20%_48%,rgba(139,92,246,0.08),transparent_26%)]" /> */}
 
       <div className="container mx-auto grid items-center gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:gap-14">
         <div className="max-w-xl">
@@ -51,13 +51,13 @@ function WhyWeExist() {
         </div>
 
         <div className="relative">
-          <div className="pointer-events-none absolute inset-10 -z-10 rounded-full bg-blue-500/18 blur-3xl" />
+          <div className="pointer-events-none absolute inset-10 -z-10 rounded-full" />
           <Image
             src="/images/about_3.svg"
             alt="Separate business tools connected around Kora AI"
             width={741}
             height={775}
-            className="mx-auto h-auto w-full max-w-[640px] drop-shadow-[0_0_70px_rgba(37,99,235,0.22)]"
+            className="mx-auto h-auto w-full max-w-[640px]"
           />
         </div>
       </div>

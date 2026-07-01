@@ -94,7 +94,7 @@ function FeatureGrid({
     <div className="mt-7 grid gap-4 sm:grid-cols-2">
       {features.map(({ icon: Icon, title, description }) => (
         <div key={title} className="flex items-start gap-3">
-          <div className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-blue-500/10 text-blue-300">
+          <div className="grid h-10 w-10 shrink-0 place-items-center rounded-lg text-blue-300">
             <Icon className="h-5 w-5" />
           </div>
           <div>
@@ -112,13 +112,13 @@ function FeatureGrid({
 function ImagePanel({ src, alt }: { src: string; alt: string }) {
   return (
     <div className="relative">
-      <div className="pointer-events-none absolute -inset-4 -z-10 rounded-[2rem] bg-blue-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute -inset-4 -z-10 rounded-[2rem]" />
       <Image
         src={src}
         width={780}
         height={430}
         alt={alt}
-        className="h-auto w-full drop-shadow-[0_0_50px_rgba(37,99,235,0.22)]"
+        className="h-auto w-full"
       />
     </div>
   );
@@ -126,11 +126,11 @@ function ImagePanel({ src, alt }: { src: string; alt: string }) {
 
 function DomainsPublish() {
   return (
-    <section className="relative overflow-hidden bg-[#020813] px-4 text-white sm:px-6 lg:px-8">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_76%_20%,rgba(37,99,235,0.14),transparent_28%),radial-gradient(circle_at_50%_82%,rgba(37,99,235,0.10),transparent_30%)]" />
+    <section className="relative overflow-hidden bg-[#010611] px-4 text-white sm:px-6 lg:px-8">
+      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_76%_20%,rgba(37,99,235,0.14),transparent_28%),radial-gradient(circle_at_50%_82%,rgba(37,99,235,0.10),transparent_30%)]" /> */}
 
       <div className="container relative mx-auto space-y-20 lg:space-y-24">
-        <div className="grid items-center gap-12 rounded-2xl border border-blue-300/10 bg-[#041025]/70 p-6 shadow-2xl shadow-black/40 lg:grid-cols-12 lg:gap-12 lg:p-9">
+        <div className="grid items-center gap-12 rounded-2xl border border-blue-300/10 bg-[#010611]/70 p-6 shadow-2xl shadow-black/40 lg:grid-cols-12 lg:gap-12 lg:p-9">
           <div className="lg:col-span-5">
             <div className="inline-flex items-center rounded-full border border-cyan-400/25 bg-cyan-500/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-cyan-300">
               Domains & Publishing
@@ -159,7 +159,7 @@ function DomainsPublish() {
           </div>
         </div>
 
-        <div className="grid items-center gap-12 rounded-2xl border border-blue-300/10 bg-[#041025]/70 p-6 shadow-2xl shadow-black/40 lg:grid-cols-12 lg:gap-12 lg:p-9">
+        <div className="grid items-center gap-12 rounded-2xl border border-blue-300/10 bg-[#010611]/70 p-6 lg:grid-cols-12 lg:gap-12 lg:p-9">
           <div className="lg:col-span-7">
             <ImagePanel
               src="/images/webb_6.svg"

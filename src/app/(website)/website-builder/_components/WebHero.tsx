@@ -44,8 +44,8 @@ const avatars = [
 
 function WebHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#000711] px-4 py-14 text-white sm:px-6 lg:min-h-[calc(100vh-80px)] lg:px-8 lg:py-16">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_72%_44%,rgba(37,99,235,0.16),transparent_38%),radial-gradient(circle_at_18%_28%,rgba(37,99,235,0.10),transparent_30%),linear-gradient(180deg,#000711_0%,#000711_82%,#020813_100%)]" />
+    <section className="relative isolate overflow-hidden bg-[#01081A] px-4 py-14 text-white sm:px-6 lg:min-h-[calc(100vh-80px)] lg:px-8 lg:py-16">
+      {/* <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_72%_44%,rgba(37,99,235,0.16),transparent_38%),radial-gradient(circle_at_18%_28%,rgba(37,99,235,0.10),transparent_30%),linear-gradient(180deg,#000711_0%,#000711_82%,#020813_100%)]" /> */}
       <div className="absolute inset-x-0 top-0 -z-10 h-px bg-blue-300/10" />
 
       <div className="container mx-auto grid min-h-[calc(100vh-180px)] items-center gap-12 lg:grid-cols-[0.86fr_1.14fr] lg:gap-12">
@@ -123,7 +123,7 @@ function WebHero() {
         </div>
 
         <div className="relative overflow-hidden">
-          <div className="pointer-events-none absolute -inset-8 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.13),rgba(0,7,17,0)_70%)]" />
+          {/* <div className="pointer-events-none absolute -inset-8 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.13),rgba(0,7,17,0)_70%)]" /> */}
 
           <div className="relative">
             <Image
@@ -132,9 +132,9 @@ function WebHero() {
               height={620}
               alt="KoraAI website builder preview"
               priority
-              className="h-auto w-full [mask-image:linear-gradient(90deg,transparent_0%,#000_9%,#000_88%,transparent_100%),linear-gradient(180deg,transparent_0%,#000_8%,#000_86%,transparent_100%)] [mask-composite:intersect] drop-shadow-[0_0_42px_rgba(37,99,235,0.18)]"
+              className="h-auto w-full [mask-image:linear-gradient(90deg,transparent_0%,#000_9%,#000_88%,transparent_100%),[mask-composite:intersect]"
             />
-            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#000711_0%,rgba(0,7,17,0)_11%,rgba(0,7,17,0)_84%,#000711_100%),linear-gradient(180deg,#000711_0%,rgba(0,7,17,0)_10%,rgba(0,7,17,0)_82%,#000711_100%)]" />
+            {/* <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#000711_0%,rgba(0,7,17,0)_11%,rgba(0,7,17,0)_84%,#000711_100%),linear-gradient(180deg,#000711_0%,rgba(0,7,17,0)_10%,rgba(0,7,17,0)_82%,#000711_100%)]" /> */}
 
             {/* <div className="mx-auto mt-4 flex max-w-md items-center justify-between rounded-xl border border-blue-300/10 bg-[#061126]/90 px-4 py-3 text-sm text-slate-300 shadow-2xl shadow-black/40">
               <span className="inline-flex items-center gap-2 truncate">

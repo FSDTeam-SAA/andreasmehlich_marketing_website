@@ -63,8 +63,7 @@ function RealTimeMonitoring() {
               Real-Time Business Monitoring
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15]">
-              Know What’s <br />
-              Happening <br />
+              Know What’s Happening
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
                 Right Now
               </span>
@@ -110,11 +109,11 @@ function RealTimeMonitoring() {
         </div>
 
         {/* ================= RIGHT SIDE: DASHBOARD WRAPPER (DUMMY IMAGE ALTERNATIVE) ================= */}
-        <div className="lg:col-span-8 relative min-h-[380px] overflow-hidden rounded-2xl border border-zinc-900 bg-[#030a16] p-4 shadow-2xl shadow-black/80 group lg:min-h-0">
+        <div className="lg:col-span-8 relative min-h-[380px] overflow-hidden rounded-2xl p-4 lg:min-h-0">
           <Image
             src="/images/dash_2.svg"
             fill
-            alt="iamge"
+            alt="Dashboard Image"
             className="object-fill"
           />
         </div>

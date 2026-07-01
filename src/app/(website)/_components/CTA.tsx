@@ -10,7 +10,7 @@ export default function CTA() {
     <section className="w-full bg-[#00091E] px-6 lg:py-16 text-white md:px-12 lg:px-20">
       <div className="mx-auto container">
         {/* Main CTA Box Panel with Glow and Borders matching image_fc80fa.png */}
-        <div className="relative rounded-3xl border border-blue-500/20 p-8 md:p-12 lg:p-16 overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-[#091530]">
+        <div className="relative rounded-3xl border border-blue-500/20 p-8 md:p-12 lg:p-16 overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-[#050E25]">
           {/* Decorative background grid/waves effect using CSS layout */}
           <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]" />
 
@@ -44,7 +44,7 @@ export default function CTA() {
             {/* ================= RIGHT SIDE: GLOWING ROBOT SMILEY VECTOR ================= */}
             <div className="relative lg:col-span-5 flex items-center justify-center lg:justify-end w-full min-h-[220px]">
               <Image
-                src="/images/cta_image.svg"
+                src="/images/cta_image.png"
                 width={500}
                 height={500}
                 alt="image"

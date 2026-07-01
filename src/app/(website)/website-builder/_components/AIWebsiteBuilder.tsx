@@ -45,7 +45,7 @@ const builderFeatures = [
 function AIWebsiteBuilder() {
   return (
     <section id="AI-website-builder" className="relative overflow-hidden bg-[#020813] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_42%,rgba(37,99,235,0.18),transparent_36%),radial-gradient(circle_at_18%_50%,rgba(14,165,233,0.10),transparent_28%)]" />
+      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_42%,rgba(37,99,235,0.18),transparent_36%),radial-gradient(circle_at_18%_50%,rgba(14,165,233,0.10),transparent_28%)]" /> */}
 
       <div className="container relative mx-auto grid items-center gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">
         <div className="max-w-lg">
@@ -93,7 +93,7 @@ function AIWebsiteBuilder() {
             width={920}
             height={610}
             alt="AI website builder dashboard"
-            className="h-auto w-full drop-shadow-[0_0_60px_rgba(37,99,235,0.24)]"
+            className="h-auto w-full"
           />
         </div>
       </div>

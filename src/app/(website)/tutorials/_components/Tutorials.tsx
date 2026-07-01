@@ -35,9 +35,6 @@ const features = [
 function Tutorials() {
   return (
     <section className="relative isolate overflow-hidden bg-[#010616] px-4 py-16 text-white sm:px-6 lg:min-h-[calc(100vh-80px)] lg:px-8 lg:py-20">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_40%,rgba(37,99,235,0.20),transparent_34%),radial-gradient(circle_at_16%_34%,rgba(139,92,246,0.10),transparent_26%)]" />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-px bg-blue-300/10" />
-
       <div className="container mx-auto grid items-center gap-8 lg:min-h-[calc(100vh-190px)] lg:grid-cols-[0.78fr_1.22fr] lg:gap-10">
         <div className="max-w-xl">
           <div className="text-sm font-bold uppercase tracking-[0.18em] text-violet-400">
@@ -95,9 +92,7 @@ function Tutorials() {
         </div>
 
         <div className="relative">
-          <div className="pointer-events-none absolute -inset-y-16 left-6 right-0 -z-10 bg-[linear-gradient(90deg,transparent_0%,rgba(0,5,18,0.42)_34%,rgba(0,5,18,0.7)_82%,rgba(0,5,18,0.86)_100%)]" />
-          <div className="pointer-events-none absolute inset-10 -z-10 rounded-full bg-blue-500/14 blur-3xl" />
-          <div className="relative mx-auto max-w-[790px] overflow-hidden bg-[#000512] drop-shadow-[0_0_58px_rgba(37,99,235,0.2)] [mask-image:linear-gradient(90deg,transparent_0%,#000_8%,#000_84%,transparent_100%)]">
+          <div className="relative mx-auto max-w-[790px] overflow-hidden bg-[#000512]">
             <Image
               src="/images/tuto_1.svg"
               alt="KoraAI tutorials dashboard with course cards and assistant preview"
@@ -106,7 +101,6 @@ function Tutorials() {
               priority
               className="h-auto w-full"
             />
-            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#000512_0%,rgba(0,5,18,0.42)_10%,rgba(0,5,18,0)_34%,rgba(0,5,18,0.08)_70%,rgba(0,5,18,0.42)_88%,#000512_100%),linear-gradient(180deg,#000512_0%,rgba(0,5,18,0)_14%,rgba(0,5,18,0)_78%,#000512_100%)]" />
           </div>
         </div>
       </div>

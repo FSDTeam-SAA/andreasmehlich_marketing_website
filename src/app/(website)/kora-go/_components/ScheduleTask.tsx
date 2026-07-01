@@ -65,15 +65,15 @@ function PhoneImage({
     <div
       className={`relative mx-auto w-full max-w-[340px] overflow-hidden ${className}`}
     >
-      <div className="pointer-events-none absolute inset-x-8 bottom-4 h-12 rounded-full bg-blue-500/20 blur-2xl" />
+      <div className="pointer-events-none absolute inset-x-8 bottom-4 h-12 rounded-full" />
       <Image
         src={src}
         width={360}
         height={620}
         alt={alt}
-        className="relative h-auto w-full [mask-image:linear-gradient(90deg,transparent_0%,#000_10%,#000_88%,transparent_100%),linear-gradient(180deg,transparent_0%,#000_8%,#000_88%,transparent_100%)] [mask-composite:intersect] drop-shadow-[0_0_32px_rgba(37,99,235,0.16)]"
+        className="relative h-auto w-full [mask-image:linear-gradient(90deg,transparent_0%,#000_10%,#000_88%,transparent_100%),linear-gradient(180deg,transparent_0%,#000_8%,#000_88%,transparent_100%)] [mask-composite:intersect]"
       />
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#000711_0%,rgba(0,7,17,0)_12%,rgba(0,7,17,0)_84%,#000711_100%),linear-gradient(180deg,#000711_0%,rgba(0,7,17,0)_10%,rgba(0,7,17,0)_84%,#000711_100%)]" />
+      {/* <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#000711_0%,rgba(0,7,17,0)_12%,rgba(0,7,17,0)_84%,#000711_100%),linear-gradient(180deg,#000711_0%,rgba(0,7,17,0)_10%,rgba(0,7,17,0)_84%,#000711_100%)]" /> */}
     </div>
   );
 }

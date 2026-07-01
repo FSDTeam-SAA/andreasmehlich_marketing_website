@@ -19,7 +19,9 @@ function AIDashboardOverview() {
 
           <h1 className="mx-auto max-w-3xl text-4xl font-medium leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-5xl">
             Everything You Need{" "}
-            <span className="bg-gradient-to-r from-blue-500 via-indigo-400 to-fuchsia-400 bg-clip-text text-transparent block">In One Place</span>
+            <span className="bg-gradient-to-r from-blue-500 via-indigo-400 to-fuchsia-400 bg-clip-text text-transparent block">
+              In One Place
+            </span>
           </h1>
 
           <p className="mx-auto max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
@@ -30,7 +32,7 @@ function AIDashboardOverview() {
 
         <div className="mt-14 w-full container ">
           <div className="relative bg-[#000712]">
-            <div className="absolute -inset-10 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.10),rgba(0,7,18,0)_68%)]" />
+            {/* <div className="absolute -inset-10 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.10),rgba(0,7,18,0)_68%)]" /> */}
 
             <div className="relative overflow-hidden bg-[#000712]">
               <Image
@@ -41,7 +43,7 @@ function AIDashboardOverview() {
                 priority
                 className="h-auto w-full [mask-image:linear-gradient(90deg,transparent_0%,#000_7%,#000_93%,transparent_100%),linear-gradient(180deg,transparent_0%,#000_8%,#000_92%,transparent_100%)] [mask-composite:intersect]"
               />
-              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#000712_0%,rgba(0,7,18,0)_9%,rgba(0,7,18,0)_91%,#000712_100%),linear-gradient(180deg,#000712_0%,rgba(0,7,18,0)_10%,rgba(0,7,18,0)_90%,#000712_100%)]" />
+              {/* <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#000712_0%,rgba(0,7,18,0)_9%,rgba(0,7,18,0)_91%,#000712_100%),linear-gradient(180deg,#000712_0%,rgba(0,7,18,0)_10%,rgba(0,7,18,0)_90%,#000712_100%)]" /> */}
             </div>
           </div>
         </div>

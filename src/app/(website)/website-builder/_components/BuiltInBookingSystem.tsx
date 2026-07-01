@@ -43,9 +43,9 @@ function BuiltInBookingSystem() {
   return (
     <section
       id="built-in-booking-system"
-      className="scroll-mt-20 relative overflow-hidden bg-[#020813] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-24"
+      className="scroll-mt-20 relative overflow-hidden bg-[#000413] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-24"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_38%,rgba(37,99,235,0.18),transparent_34%)]" />
+      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_38%,rgba(37,99,235,0.18),transparent_34%)]" /> */}
 
       <div className="container relative mx-auto">
         <div className="mx-auto max-w-4xl text-center">
@@ -68,11 +68,11 @@ function BuiltInBookingSystem() {
 
         <div className="mt-12">
           <Image
-            src="/images/webb_2.svg"
+            src="/images/webb_2.png"
             width={1260}
             height={570}
             alt="Built-in booking system workflow"
-            className="mx-auto h-auto w-full drop-shadow-[0_0_60px_rgba(37,99,235,0.22)]"
+            className="mx-auto h-auto w-full"
           />
         </div>
 

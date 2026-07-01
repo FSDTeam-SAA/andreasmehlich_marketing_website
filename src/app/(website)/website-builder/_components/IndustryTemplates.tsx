@@ -23,7 +23,7 @@ const industries = [
 function IndustryTemplates() {
   return (
     <section className="relative overflow-hidden bg-[#020813] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_68%_42%,rgba(37,99,235,0.18),transparent_36%),radial-gradient(circle_at_22%_76%,rgba(37,99,235,0.12),transparent_26%)]" />
+      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_68%_42%,rgba(37,99,235,0.18),transparent_36%),radial-gradient(circle_at_22%_76%,rgba(37,99,235,0.12),transparent_26%)]" /> */}
 
       <div className="container relative mx-auto">
         <div className="mx-auto max-w-4xl text-center">
@@ -67,39 +67,37 @@ function IndustryTemplates() {
             width={1200}
             height={660}
             alt="Industry website templates"
-            className="mx-auto h-auto w-full drop-shadow-[0_0_60px_rgba(37,99,235,0.24)]"
+            className="mx-auto h-auto w-full"
           />
         </div>
 
         <div className="mx-auto mt-10 max-w-4xl rounded-2xl border border-blue-300/10 bg-[#061126]/80 p-6 shadow-2xl shadow-black/40">
-  <div className="flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-center">
-    
-    <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-blue-500/15 text-blue-300 shadow-[0_0_28px_rgba(37,99,235,0.24)]">
-      <Crown className="h-7 w-7" />
-    </div>
+          <div className="flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-center">
+            <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-blue-500/15 text-blue-300 shadow-[0_0_28px_rgba(37,99,235,0.24)]">
+              <Crown className="h-7 w-7" />
+            </div>
 
-    <div className="flex-1">
-      <h3 className="text-lg font-semibold text-white">
-        Don&apos;t See Your Industry?
-      </h3>
+            <div className="flex-1">
+              <h3 className="text-lg font-semibold text-white">
+                Don&apos;t See Your Industry?
+              </h3>
 
-      <p className="mt-2 text-sm leading-6 text-slate-400">
-        Our AI can create the perfect template for any type of business.
-      </p>
-    </div>
+              <p className="mt-2 text-sm leading-6 text-slate-400">
+                Our AI can create the perfect template for any type of business.
+              </p>
+            </div>
 
-    <div className="w-full sm:w-auto">
-      <Link
-        href="/pricing"
-        className="group mt-2 inline-flex h-12 w-full items-center justify-center gap-3 rounded-xl bg-blue-600 px-6 text-sm font-semibold text-white shadow-[0_0_28px_rgba(37,99,235,0.45)] transition-colors hover:bg-blue-500 sm:mt-0 sm:w-auto"
-      >
-        Create Custom Template
-        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-      </Link>
-    </div>
-
-  </div>
-</div>
+            <div className="w-full sm:w-auto">
+              <Link
+                href="/pricing"
+                className="group mt-2 inline-flex h-12 w-full items-center justify-center gap-3 rounded-xl bg-blue-600 px-6 text-sm font-semibold text-white shadow-[0_0_28px_rgba(37,99,235,0.45)] transition-colors hover:bg-blue-500 sm:mt-0 sm:w-auto"
+              >
+                Create Custom Template
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

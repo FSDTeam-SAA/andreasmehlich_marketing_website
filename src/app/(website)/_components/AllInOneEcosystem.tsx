@@ -49,7 +49,7 @@ export default function AllInOneEcosystem() {
 
   return (
     <section className="relative w-full overflow-hidden bg-[#00091E] px-4 py-14 text-white select-none sm:px-6 sm:py-16 md:px-12 lg:px-20 lg:py-20">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_78%_42%,rgba(37,99,235,0.16),transparent_34%),linear-gradient(180deg,rgba(0,9,30,0)_0%,#00091E_16%,#00091E_84%,rgba(0,9,30,0)_100%)]" />
+      
       <div className="relative mx-auto container">
         {/* ================= MAIN TWO-COLUMN CONTENT ================= */}
         <div className="grid grid-cols-1 items-center gap-8 lg:min-h-[640px] lg:grid-cols-12 lg:gap-8">
@@ -80,18 +80,15 @@ export default function AllInOneEcosystem() {
           </div>
 
           <div className="relative -mt-2 flex h-[340px] w-full items-center justify-center overflow-hidden sm:h-[560px] lg:col-span-7 lg:-mr-10 lg:mt-0 lg:h-[680px]">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.10),rgba(0,9,30,0)_52%,#00091E_82%)]" />
-            <div className="absolute inset-4 rounded-full bg-blue-600/8 blur-3xl" />
-            {/* <div className="absolute h-[72%] w-[72%] rounded-full border border-blue-400/15 shadow-[0_0_90px_rgba(37,99,235,0.22)]" /> */}
+            {/* <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.10),rgba(0,9,30,0)_52%,#00091E_82%)]" /> */}
             <Image
-              src="/images/cercleImage.svg"
+              src="/images/cercleImage.png"
               width={760}
               height={760}
               alt="KoraAI all-in-one ecosystem"
-              className="relative h-auto w-full max-w-[430px] [mask-image:linear-gradient(90deg,transparent_0%,#000_11%,#000_78%,transparent_100%),linear-gradient(180deg,transparent_0%,#000_10%,#000_88%,transparent_100%)] [mask-composite:intersect] drop-shadow-[0_0_38px_rgba(37,99,235,0.20)] sm:max-w-[640px] lg:max-w-[760px]"
+              className="relative h-auto w-full max-w-[500px] [mask-image:linear-gradient(90deg,transparent_0%,#000_11%,#000_78%,transparent_100%),linear-gradient(180deg,transparent_0%,#000_10%,#000_88%,transparent_100%)] [mask-composite:intersect] drop-shadow-[0_0_38px_rgba(37,99,235,0.20)] sm:max-w-[720px] lg:max-w-[860px]"
               priority
             />
-            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#00091E_0%,rgba(0,9,30,0)_13%,rgba(0,9,30,0)_72%,#00091E_96%),linear-gradient(180deg,#00091E_0%,rgba(0,9,30,0)_12%,rgba(0,9,30,0)_86%,#00091E_100%)]" />
           </div>
         </div>
 

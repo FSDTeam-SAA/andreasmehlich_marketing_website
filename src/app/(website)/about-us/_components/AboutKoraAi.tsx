@@ -18,9 +18,7 @@ const features = [
 
 function AboutKoraAi() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#010616] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_72%_20%,rgba(37,99,235,0.16),transparent_30%),radial-gradient(circle_at_20%_74%,rgba(139,92,246,0.10),transparent_28%)]" />
-
+    <section className="relative isolate overflow-hidden bg-[#00020E] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
       <div className="container mx-auto">
         <div className="grid items-center gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:gap-10">
           <div className="max-w-xl">
@@ -66,7 +64,7 @@ function AboutKoraAi() {
 
           <div className="relative">
             <div className="pointer-events-none absolute inset-10 -z-10 rounded-full bg-blue-500/18 blur-3xl" />
-            <div className="relative mx-auto max-w-[820px] overflow-hidden bg-[#010616] drop-shadow-[0_0_64px_rgba(37,99,235,0.22)] [mask-image:linear-gradient(90deg,transparent_0%,#000_6%,#000_92%,transparent_100%)]">
+            <div className="relative mx-auto max-w-[820px] overflow-hidden">
               <Image
                 src="/images/about_1.svg"
                 alt="Kora AI platform shown across dashboard, website builder and mobile app"
@@ -75,7 +73,6 @@ function AboutKoraAi() {
                 priority
                 className="h-auto w-full"
               />
-              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#010616_0%,rgba(1,6,22,0.32)_8%,rgba(1,6,22,0)_28%,rgba(1,6,22,0.06)_80%,#010616_100%),linear-gradient(180deg,#010616_0%,rgba(1,6,22,0)_12%,rgba(1,6,22,0)_84%,#010616_100%)]" />
             </div>
           </div>
         </div>
@@ -89,7 +86,6 @@ function AboutKoraAi() {
               height={506}
               className="h-full min-h-[300px] w-full object-contain drop-shadow-[0_0_40px_rgba(37,99,235,0.2)] [mask-image:linear-gradient(90deg,transparent_0%,#000_5%,#000_95%,transparent_100%),linear-gradient(180deg,transparent_0%,#000_8%,#000_92%,transparent_100%)] [mask-composite:intersect]"
             />
-            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#061126_0%,rgba(6,17,38,0)_9%,rgba(6,17,38,0)_88%,#061126_100%),linear-gradient(180deg,#061126_0%,rgba(6,17,38,0)_10%,rgba(6,17,38,0)_86%,#061126_100%)]" />
           </div>
 
           <div className="relative p-8 sm:p-10 lg:p-12">

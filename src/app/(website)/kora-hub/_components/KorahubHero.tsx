@@ -57,9 +57,6 @@ const stats = [
 function KorahubHero() {
   return (
     <section className="relative isolate overflow-hidden bg-[#010616] px-4 pb-10 pt-12 text-white sm:px-6 lg:min-h-[calc(100vh-80px)] lg:px-8 lg:pb-14 lg:pt-16">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_66%_42%,rgba(37,99,235,0.20),transparent_34%),radial-gradient(circle_at_18%_26%,rgba(14,165,233,0.12),transparent_28%),radial-gradient(circle_at_86%_24%,rgba(139,92,246,0.10),transparent_24%)]" />
-      <div className="absolute inset-x-0 top-0 -z-10 h-px bg-blue-300/10" />
-
       <div className="container mx-auto flex flex-col justify-center lg:min-h-[calc(100vh-150px)]">
         <div className="grid items-center gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-12">
           <div className="max-w-xl">
@@ -123,39 +120,43 @@ function KorahubHero() {
           </div>
 
           <div className="relative overflow-hidden">
-            <div className="pointer-events-none absolute inset-8 -z-10 rounded-full bg-blue-500/12 blur-3xl" />
+            <div className="pointer-events-none absolute inset-8 -z-10 rounded-full" />
             <Image
               src="/images/korah_1.svg"
               alt="Kora Hub content network with customer stories, AI assistant, use cases and tutorials"
               width={935}
               height={834}
               priority
-              className="mx-auto h-auto w-full max-w-[760px] [mask-image:linear-gradient(90deg,transparent_0%,#000_10%,#000_88%,transparent_100%),linear-gradient(180deg,transparent_0%,#000_8%,#000_88%,transparent_100%)] [mask-composite:intersect] drop-shadow-[0_0_38px_rgba(37,99,235,0.16)]"
+              className="mx-auto h-auto w-full max-w-[760px]"
             />
-            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#010616_0%,rgba(1,6,22,0)_12%,rgba(1,6,22,0)_84%,#010616_100%),linear-gradient(180deg,#010616_0%,rgba(1,6,22,0)_10%,rgba(1,6,22,0)_84%,#010616_100%)]" />
           </div>
         </div>
 
         <div className="mt-8 rounded-2xl border border-blue-300/15 bg-[#061126]/60 px-5 py-5 shadow-[0_0_50px_rgba(37,99,235,0.12)] backdrop-blur-sm lg:mt-10">
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-blue-300/10">
-            {stats.map(({ icon: Icon, value, label, note, color, bg, border }) => (
-              <div key={label} className="flex items-center gap-4 lg:px-6 first:lg:pl-0 last:lg:pr-0">
+            {stats.map(
+              ({ icon: Icon, value, label, note, color, bg, border }) => (
                 <div
-                  className={`grid h-14 w-14 shrink-0 place-items-center rounded-full border ${border} ${bg} ${color}`}
+                  key={label}
+                  className="flex items-center gap-4 lg:px-6 first:lg:pl-0 last:lg:pr-0"
                 >
-                  <Icon className="h-7 w-7" strokeWidth={1.8} />
+                  <div
+                    className={`grid h-14 w-14 shrink-0 place-items-center rounded-full border ${border} ${bg} ${color}`}
+                  >
+                    <Icon className="h-7 w-7" strokeWidth={1.8} />
+                  </div>
+                  <div>
+                    <p className="text-2xl font-semibold leading-none text-white">
+                      {value}
+                    </p>
+                    <p className="mt-2 text-sm font-medium text-slate-200">
+                      {label}
+                    </p>
+                    <p className="mt-1 text-xs text-slate-400">{note}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-2xl font-semibold leading-none text-white">
-                    {value}
-                  </p>
-                  <p className="mt-2 text-sm font-medium text-slate-200">
-                    {label}
-                  </p>
-                  <p className="mt-1 text-xs text-slate-400">{note}</p>
-                </div>
-              </div>
-            ))}
+              ),
+            )}
           </div>
         </div>
       </div>
